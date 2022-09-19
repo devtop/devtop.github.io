@@ -7,11 +7,11 @@ function fetchJSON(url, callback) {
        .then((json) => callback(json));
 }
 
-fetchManifest(server) {
-   fetchJSON(server + 'data.json', parseManifest);   
+function fetchManifest(server) {
+   fetchJSON(server + 'data.json', parseManifest);
 }
 
-parseManifest(manifest) {
+function parseManifest(manifest) {
    console.log(json);
 }
 
