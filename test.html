@@ -1,6 +1,5 @@
 <html>
 <head>
-<!--   <script src="https://tobinium.gitlab.io/jsonservertest/loadData.js"> -->
 <script>
 function fetchJSON(url, callback) {
    fetch(url)
@@ -8,9 +7,18 @@ function fetchJSON(url, callback) {
        .then((json) => callback(json));
 }
 
-fetchJSON('https://tobinium.gitlab.io/jsonservertest/data.json',
-   function(json){console.log(json)});
-   </script>
+fetchManifest(server) {
+   fetchJSON(server + 'data.json', parseManifest);   
+}
+
+parseManifest(manifest) {
+   console.log(json);
+}
+
+fetchManifest('https://tobinium.gitlab.io/jsonservertest/');
+
+
+</script>
 </head>
 <body>
    Loaded
